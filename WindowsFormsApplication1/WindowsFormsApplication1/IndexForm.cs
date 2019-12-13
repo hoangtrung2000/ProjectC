@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
                 var row = this.grdViewAll.SelectedRows[0];
                 var employeeView = (EmployeeView)row.DataBoundItem;
 
-                new UpdateForm().ShowDialog();
+                new UpdateForm(employeeView.id).ShowDialog();
             }
         }
 
