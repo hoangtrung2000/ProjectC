@@ -48,5 +48,6 @@ namespace WindowsFormsApplication1
             this.cmbLocation.DisplayMember = "Name";
             this.cmbLocation.ValueMember = "id";
         }
+    
     }
 }
