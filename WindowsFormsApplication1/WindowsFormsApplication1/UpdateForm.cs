@@ -26,12 +26,21 @@ namespace WindowsFormsApplication1
 
         void btnCancel_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         void btnSave_Click(object sender, EventArgs e)
         {
-            
+            var code = txtCode.Text;
+            var name = txtName.Text;
+            var birthday = dtp.Value;
+            var address = txtAddress.Text;
+            var location_id = int.Parse(cmbLocation.Text);
+            var timework = (int)nudTimework.Value;
+            var salary = int.Parse(txtSalary.Text);
+            this.Business.UpdateEmployee(EmployeeId, code, name, birthday, address, location_id, timework, salary);
+            MessageBox.Show("Update employee successfully");
+            this.Close();
         }
 
         void UpdateForm_Load(object sender, EventArgs e)
