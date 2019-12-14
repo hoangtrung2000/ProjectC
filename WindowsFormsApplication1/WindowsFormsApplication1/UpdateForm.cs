@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
             var name = txtName.Text;
             var birthday = dtp.Value;
             var address = txtAddress.Text;
-            var location_id = int.Parse(cmbLocation.Text);
+            var location_id = (int)this.cmbLocation.SelectedValue;
             var timework = (int)nudTimework.Value;
             var salary = int.Parse(txtSalary.Text);
             this.Business.UpdateEmployee(EmployeeId, code, name, birthday, address, location_id, timework, salary);
@@ -51,13 +51,13 @@ namespace WindowsFormsApplication1
             this.txtName.Text = employee.Name;
             this.dtp.Value = employee.Birthday;
             this.txtAddress.Text = employee.Address;
-            this.cmbLocation.Text = employee.Location.ToString();
+            ////this.cmbLocation.Text = employee.Location.ToString();
             this.nudTimework.Value = employee.Timework;
             this.txtSalary.Text = employee.Salary.ToString();
-            //this.cmbLocation.DataSource = this.Business.GetEmployees();
-            //this.cmbLocation.DisplayMember = "Name";
-            //this.cmbLocation.ValueMember = "id";
-            //this.cmbLocation.SelectedValue = employee.Location_id;
+            this.cmbLocation.DataSource = this.Business.GetLocations();
+            this.cmbLocation.DisplayMember = "Name";
+            this.cmbLocation.ValueMember = "id";
+            this.cmbLocation.SelectedValue = employee.Location_id;
         }
     }
 }
