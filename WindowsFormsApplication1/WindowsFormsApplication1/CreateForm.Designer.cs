@@ -46,12 +46,13 @@
             this.lblId = new System.Windows.Forms.Label();
             this.lblTimework = new System.Windows.Forms.Label();
             this.nudTimework = new System.Windows.Forms.NumericUpDown();
+            this.lblHead = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudTimework)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(85, 56);
+            this.txtCode.Location = new System.Drawing.Point(85, 110);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(88, 20);
             this.txtCode.TabIndex = 33;
@@ -59,7 +60,7 @@
             // txtSalary
             // 
             this.txtSalary.Enabled = false;
-            this.txtSalary.Location = new System.Drawing.Point(396, 197);
+            this.txtSalary.Location = new System.Drawing.Point(396, 251);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(86, 20);
             this.txtSalary.TabIndex = 32;
@@ -72,7 +73,7 @@
             "Developer",
             "IT Manager",
             "HRM"});
-            this.cmbLocation.Location = new System.Drawing.Point(85, 194);
+            this.cmbLocation.Location = new System.Drawing.Point(85, 248);
             this.cmbLocation.Name = "cmbLocation";
             this.cmbLocation.Size = new System.Drawing.Size(121, 21);
             this.cmbLocation.TabIndex = 31;
@@ -81,7 +82,7 @@
             // 
             this.lblSalary.AutoSize = true;
             this.lblSalary.BackColor = System.Drawing.Color.Transparent;
-            this.lblSalary.Location = new System.Drawing.Point(355, 200);
+            this.lblSalary.Location = new System.Drawing.Point(355, 254);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(36, 13);
             this.lblSalary.TabIndex = 30;
@@ -89,7 +90,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(269, 243);
+            this.btnCancel.Location = new System.Drawing.Point(269, 297);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 29;
@@ -98,7 +99,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(151, 243);
+            this.btnSave.Location = new System.Drawing.Point(151, 297);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 28;
@@ -107,28 +108,28 @@
             // 
             // dtp
             // 
-            this.dtp.Location = new System.Drawing.Point(85, 123);
+            this.dtp.Location = new System.Drawing.Point(85, 177);
             this.dtp.Name = "dtp";
             this.dtp.Size = new System.Drawing.Size(200, 20);
             this.dtp.TabIndex = 27;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(85, 158);
+            this.txtAddress.Location = new System.Drawing.Point(85, 212);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(200, 20);
             this.txtAddress.TabIndex = 26;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(85, 90);
+            this.txtName.Location = new System.Drawing.Point(85, 144);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(200, 20);
             this.txtName.TabIndex = 25;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(85, 25);
+            this.txtId.Location = new System.Drawing.Point(85, 79);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(69, 20);
             this.txtId.TabIndex = 24;
@@ -137,7 +138,7 @@
             // 
             this.lblLocation.AutoSize = true;
             this.lblLocation.BackColor = System.Drawing.Color.Transparent;
-            this.lblLocation.Location = new System.Drawing.Point(21, 197);
+            this.lblLocation.Location = new System.Drawing.Point(21, 251);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(48, 13);
             this.lblLocation.TabIndex = 23;
@@ -147,7 +148,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
-            this.lblAddress.Location = new System.Drawing.Point(21, 161);
+            this.lblAddress.Location = new System.Drawing.Point(21, 215);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(45, 13);
             this.lblAddress.TabIndex = 22;
@@ -157,7 +158,7 @@
             // 
             this.lblBirhday.AutoSize = true;
             this.lblBirhday.BackColor = System.Drawing.Color.Transparent;
-            this.lblBirhday.Location = new System.Drawing.Point(21, 123);
+            this.lblBirhday.Location = new System.Drawing.Point(21, 177);
             this.lblBirhday.Name = "lblBirhday";
             this.lblBirhday.Size = new System.Drawing.Size(47, 13);
             this.lblBirhday.TabIndex = 21;
@@ -167,7 +168,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Location = new System.Drawing.Point(21, 93);
+            this.lblName.Location = new System.Drawing.Point(21, 147);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 20;
@@ -177,7 +178,7 @@
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.BackColor = System.Drawing.Color.Transparent;
-            this.lblCode.Location = new System.Drawing.Point(21, 59);
+            this.lblCode.Location = new System.Drawing.Point(21, 113);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(32, 13);
             this.lblCode.TabIndex = 19;
@@ -187,7 +188,7 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.BackColor = System.Drawing.Color.Transparent;
-            this.lblId.Location = new System.Drawing.Point(21, 28);
+            this.lblId.Location = new System.Drawing.Point(21, 82);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 18;
@@ -197,7 +198,7 @@
             // 
             this.lblTimework.AutoSize = true;
             this.lblTimework.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimework.Location = new System.Drawing.Point(216, 198);
+            this.lblTimework.Location = new System.Drawing.Point(216, 252);
             this.lblTimework.Name = "lblTimework";
             this.lblTimework.Size = new System.Drawing.Size(59, 13);
             this.lblTimework.TabIndex = 35;
@@ -205,7 +206,7 @@
             // 
             // nudTimework
             // 
-            this.nudTimework.Location = new System.Drawing.Point(285, 196);
+            this.nudTimework.Location = new System.Drawing.Point(285, 250);
             this.nudTimework.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -215,11 +216,23 @@
             this.nudTimework.Size = new System.Drawing.Size(49, 20);
             this.nudTimework.TabIndex = 36;
             // 
+            // lblHead
+            // 
+            this.lblHead.AutoSize = true;
+            this.lblHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHead.ForeColor = System.Drawing.Color.Red;
+            this.lblHead.Location = new System.Drawing.Point(108, 19);
+            this.lblHead.Name = "lblHead";
+            this.lblHead.Size = new System.Drawing.Size(261, 37);
+            this.lblHead.TabIndex = 37;
+            this.lblHead.Text = "Create Employee";
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 290);
+            this.ClientSize = new System.Drawing.Size(488, 333);
+            this.Controls.Add(this.lblHead);
             this.Controls.Add(this.nudTimework);
             this.Controls.Add(this.lblTimework);
             this.Controls.Add(this.txtCode);
@@ -266,5 +279,6 @@
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblTimework;
         private System.Windows.Forms.NumericUpDown nudTimework;
+        private System.Windows.Forms.Label lblHead;
     }
 }
