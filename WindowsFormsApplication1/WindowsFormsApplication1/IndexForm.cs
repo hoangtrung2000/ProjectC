@@ -21,6 +21,13 @@ namespace WindowsFormsApplication1
             this.btnCreate.Click += btnCreate_Click;
             this.btnDelete.Click += btnDelete_Click;
             this.grdViewAll.DoubleClick += grdViewAll_DoubleClick;
+            this.btnSearch.Click += btnSearch_Click;
+        }
+
+        void btnSearch_Click(object sender, EventArgs e)
+        {
+            var db = new IMDatabaseEntities();
+            grdViewAll.DataSource = db.Employee.Where(x => x.Code.Contains(txtSearch.Text)).ToList();
         }
 
         void grdViewAll_DoubleClick(object sender, EventArgs e)
