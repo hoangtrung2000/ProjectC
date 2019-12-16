@@ -27,7 +27,11 @@ namespace WindowsFormsApplication1
         void btnSearch_Click(object sender, EventArgs e)
         {
             var db = new IMDatabaseEntities();
-            grdViewAll.DataSource = db.Employee.Where(x => x.Code.Contains(txtSearch.Text)).ToList();
+            var infor = this.Business.GetEmployees();
+            var searching = new EmployeeView[infor.Length];
+            for (int i = 0; i < infor.Length; i++)
+                searching[i] = new EmployeeView(infor[i]);
+            grdViewAll.DataSource = searching.Where(x => x.Code.Contains(txtSearch.Text)).ToList();
         }
 
         void grdViewAll_DoubleClick(object sender, EventArgs e)
