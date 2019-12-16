@@ -32,21 +32,20 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewAll)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grdViewAll
             // 
-            this.grdViewAll.AllowUserToAddRows = false;
-            this.grdViewAll.AllowUserToDeleteRows = false;
             this.grdViewAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdViewAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdViewAll.Location = new System.Drawing.Point(0, 24);
+            this.grdViewAll.Location = new System.Drawing.Point(0, 67);
             this.grdViewAll.Name = "grdViewAll";
             this.grdViewAll.ReadOnly = true;
             this.grdViewAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdViewAll.Size = new System.Drawing.Size(437, 255);
+            this.grdViewAll.Size = new System.Drawing.Size(830, 240);
             this.grdViewAll.TabIndex = 0;
             // 
             // menuStrip1
@@ -56,7 +55,7 @@
             this.btnDelete});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(437, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(830, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,11 +71,32 @@
             this.btnDelete.Size = new System.Drawing.Size(52, 20);
             this.btnDelete.Text = "Delete";
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(0, 35);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(293, 26);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.Text = "Search........";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.tải_xuống;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Location = new System.Drawing.Point(261, 36);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(31, 23);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // IndexForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 279);
+            this.ClientSize = new System.Drawing.Size(830, 309);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grdViewAll);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -96,6 +116,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnCreate;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

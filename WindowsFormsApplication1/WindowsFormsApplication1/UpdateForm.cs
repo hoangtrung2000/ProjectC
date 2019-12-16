@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
     public partial class UpdateForm : Form
     {
         private int EmployeeId;
+        private int salaryhour = 100000;
         private EmployeeManagement Business;
         public UpdateForm(int id)
         {
@@ -37,7 +38,7 @@ namespace WindowsFormsApplication1
             var address = txtAddress.Text;
             var location_id = (int)this.cmbLocation.SelectedValue;
             var timework = (int)nudTimework.Value;
-            var salary = int.Parse(txtSalary.Text);
+            var salary = (int)nudTimework.Value * salaryhour;
             this.Business.UpdateEmployee(EmployeeId, code, name, birthday, address, location_id, timework, salary);
             MessageBox.Show("Update employee successfully");
             this.Close();

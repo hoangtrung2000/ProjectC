@@ -210,6 +210,7 @@
             // 
             // txtSalary
             // 
+            this.txtSalary.Enabled = false;
             this.txtSalary.Location = new System.Drawing.Point(385, 245);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(86, 20);
