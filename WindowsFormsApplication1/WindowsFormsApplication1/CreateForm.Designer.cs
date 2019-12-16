@@ -206,6 +206,7 @@
             // 
             // nudTimework
             // 
+            this.nudTimework.Enabled = false;
             this.nudTimework.Location = new System.Drawing.Point(285, 250);
             this.nudTimework.Maximum = new decimal(new int[] {
             9999999,
