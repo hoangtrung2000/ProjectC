@@ -58,6 +58,7 @@
             // 
             // txtSalary
             // 
+            this.txtSalary.Enabled = false;
             this.txtSalary.Location = new System.Drawing.Point(396, 197);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(86, 20);
@@ -205,6 +206,11 @@
             // nudTimework
             // 
             this.nudTimework.Location = new System.Drawing.Point(285, 196);
+            this.nudTimework.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.nudTimework.Name = "nudTimework";
             this.nudTimework.Size = new System.Drawing.Size(49, 20);
             this.nudTimework.TabIndex = 36;

@@ -52,6 +52,11 @@
             // nudTimework
             // 
             this.nudTimework.Location = new System.Drawing.Point(281, 204);
+            this.nudTimework.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.nudTimework.Name = "nudTimework";
             this.nudTimework.Size = new System.Drawing.Size(49, 20);
             this.nudTimework.TabIndex = 53;

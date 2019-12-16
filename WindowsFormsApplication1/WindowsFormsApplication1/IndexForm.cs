@@ -31,9 +31,11 @@ namespace WindowsFormsApplication1
                 var employeeView = (EmployeeView)row.DataBoundItem;
 
                 new UpdateForm(employeeView.id).ShowDialog();
+                this.ShowAllEmployees();
             }
         }
-
+        //tang cai nao
+        // nudTimework 
         void btnDelete_Click(object sender, EventArgs e)
         {
             if (this.grdViewAll.SelectedRows.Count == 1)
@@ -41,7 +43,7 @@ namespace WindowsFormsApplication1
                 if (MessageBox.Show("Do you want to delete this?", "Confirm",
                     MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    var DeleteEmployee = (Employee)this.grdViewAll.SelectedRows[0].DataBoundItem;
+                    var DeleteEmployee = (EmployeeView)this.grdViewAll.SelectedRows[0].DataBoundItem;
                     this.Business.DeleteEmployee(DeleteEmployee.id);
                     MessageBox.Show("Delete employee successfully");
                     this.ShowAllEmployees();
@@ -65,8 +67,7 @@ namespace WindowsFormsApplication1
             var employeeViews = new EmployeeView[employees.Length];
             for (int i = 0; i < employees.Length; i++)
                 employeeViews[i] = new EmployeeView(employees[i]);
-            this.grdViewAll.DataSource = employeeViews;
-
+            this.grdViewAll.DataSource = employeeViews;          
         }
     }
 }
