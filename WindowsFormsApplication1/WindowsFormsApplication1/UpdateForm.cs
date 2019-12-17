@@ -25,6 +25,13 @@ namespace WindowsFormsApplication1
             this.Load += UpdateForm_Load;
             this.btnSave.Click += btnSave_Click;
             this.btnCancel.Click += btnCancel_Click;
+            this.txtSalary.DoubleClick += txtSalary_DoubleClick;
+        }
+
+        void txtSalary_DoubleClick(object sender, EventArgs e)
+        {
+            int salary = SalaryTotal();
+            txtSalary.Text = salary.ToString();
         }
 
         void btnCancel_Click(object sender, EventArgs e)
