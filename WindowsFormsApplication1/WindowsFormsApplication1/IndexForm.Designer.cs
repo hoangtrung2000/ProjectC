@@ -34,6 +34,7 @@
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnStaticst = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewAll)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCreate,
-            this.btnDelete});
+            this.btnDelete,
+            this.btnStaticst});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(830, 24);
@@ -90,6 +92,12 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
+            // btnStaticst
+            // 
+            this.btnStaticst.Name = "btnStaticst";
+            this.btnStaticst.Size = new System.Drawing.Size(57, 20);
+            this.btnStaticst.Text = "Staticst";
+            // 
             // IndexForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +126,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ToolStripMenuItem btnStaticst;
     }
 }
 

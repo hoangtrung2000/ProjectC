@@ -22,6 +22,12 @@ namespace WindowsFormsApplication1
             this.btnDelete.Click += btnDelete_Click;
             this.grdViewAll.DoubleClick += grdViewAll_DoubleClick;
             this.btnSearch.Click += btnSearch_Click;
+            this.btnStaticst.Click += btnStaticst_Click;
+        }
+
+        void btnStaticst_Click(object sender, EventArgs e)
+        {
+            new thongke().ShowDialog();
         }
 
         void btnSearch_Click(object sender, EventArgs e)
