@@ -13,7 +13,9 @@ namespace WindowsFormsApplication1
     public partial class UpdateForm : Form
     {
         private int EmployeeId;
-        private int salaryhour = 100000;
+        private int developer = 100000;
+        private int it = 200000;
+        private int hrm = 150000;
         private EmployeeManagement Business;
         public UpdateForm(int id)
         {
@@ -38,7 +40,7 @@ namespace WindowsFormsApplication1
             var address = txtAddress.Text;
             var location_id = (int)this.cmbLocation.SelectedValue;
             var timework = (int)nudTimework.Value;
-            var salary = (int)nudTimework.Value * salaryhour;
+            var salary = SalaryTotal();
             this.Business.UpdateEmployee(EmployeeId, code, name, birthday, address, location_id, timework, salary);
             MessageBox.Show("Update employee successfully");
             this.Close();
@@ -51,14 +53,30 @@ namespace WindowsFormsApplication1
             this.txtCode.Text = employee.Code;
             this.txtName.Text = employee.Name;
             this.dtp.Value = employee.Birthday;
-            this.txtAddress.Text = employee.Address;
-            ////this.cmbLocation.Text = employee.Location.ToString();
+            this.txtAddress.Text = employee.Address;      
             this.nudTimework.Value = employee.Timework;
             this.txtSalary.Text = employee.Salary.ToString();
             this.cmbLocation.DataSource = this.Business.GetLocations();
             this.cmbLocation.DisplayMember = "Name";
             this.cmbLocation.ValueMember = "id";
             this.cmbLocation.SelectedValue = employee.Location_id;
+        }
+        public int SalaryTotal()
+        {
+            int hoursalary = 0;
+            if (cmbLocation.Text == "Developer")
+            {
+                hoursalary = (int)nudTimework.Value * developer;
+            }
+            else if (cmbLocation.Text == "IT Manager")
+            {
+                hoursalary = (int)nudTimework.Value * it;
+            }
+            else if (cmbLocation.Text == "HRM")
+            {
+                hoursalary = (int)nudTimework.Value * hrm;
+            }
+            return hoursalary;
         }
     }
 }

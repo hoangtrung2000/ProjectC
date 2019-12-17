@@ -13,8 +13,6 @@ namespace WindowsFormsApplication1
     public partial class CreateForm : Form
     {
         private EmployeeManagement Business;
-        private int salaryhours = 100000;
-    
         public CreateForm()
         {
             InitializeComponent();
@@ -32,7 +30,7 @@ namespace WindowsFormsApplication1
             var address = this.txtAddress.Text;
             var location_id = (int)this.cmbLocation.SelectedValue;
             var timework = (int)this.nudTimework.Value;
-            var salary = (int)nudTimework.Value * salaryhours;
+            var salary = 0;
             this.Business.CreateEmployee(code, name, birthday, address, location_id, timework, salary);
             MessageBox.Show("Create employee successfully");
             this.Close();
@@ -49,24 +47,6 @@ namespace WindowsFormsApplication1
             this.cmbLocation.DataSource = this.Business.GetLocations();
             this.cmbLocation.DisplayMember = "Name";
             this.cmbLocation.ValueMember = "id";
-        }
-        //public int SalaryTotal()
-        //{
-        //    int hoursalary = 0;
-        //    if (cmbLocation.SelectedValue == "Developer")
-        //    {
-        //        hoursalary = (int)nudTimework.Value * developer;
-        //    }
-        //    else if (cmbLocation.SelectedValue == "IT Manager")
-        //    {
-        //        hoursalary = (int)nudTimework.Value * it;
-        //    }
-        //    else if (cmbLocation.SelectedValue == "HRM")
-        //    {
-        //        hoursalary = (int)nudTimework.Value * hrm;
-        //    }
-        //    return hoursalary;
-        //}
-    
+        }   
     }
 }
